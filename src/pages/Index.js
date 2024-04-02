@@ -1,5 +1,5 @@
 import Player from '../componenets/Drmtm'
-import { Form, useLoaderData, Link } from 'react-router-dom'
+import { Form, useLoaderData } from 'react-router-dom'
 
 function Index(props) {
     const allPlayers = useLoaderData()

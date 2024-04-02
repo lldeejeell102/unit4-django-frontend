@@ -37,7 +37,7 @@ export const updateAction = async({request, params}) => {
         salary: formData.get('salary'),
     }
 
-    await fetch(`${URL}/drmtm/${params.id}/`, {
+    await fetch(`${URL}/drmtm/${id}/`, {
         method: 'put',
         headers: {
             'Content-type': 'application/json'
