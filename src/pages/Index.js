@@ -1,4 +1,4 @@
-// import Drmtm from '../componenets/Drmtm'
+import Player from '../componenets/Drmtm'
 import { Form, useLoaderData, Link } from 'react-router-dom'
 
 function Index(props) {
@@ -27,10 +27,7 @@ function Index(props) {
                 </button>
             </Form>
             <hr/>
-            {allPlayers.map((player, i) => 
-                <Link to={`/drmtm/${i}`} key={i}>
-                    <h1>{player.name}</h1>
-                </Link>)}
+            {allPlayers.map((player, i) => <Player player={player} key={i}/>)}
         </div>
     )
 }

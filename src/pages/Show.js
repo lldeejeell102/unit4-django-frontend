@@ -1,4 +1,4 @@
-import { Link, useLoaderData, Form } from 'react-router-dom'
+import { useLoaderData, Link, Form } from 'react-router-dom'
 
 function Show(props) {
     const aPlayer = useLoaderData()
@@ -15,7 +15,7 @@ function Show(props) {
 
             <div>
                 {/* Update Form */}
-                {/* <Form action={`/update/${id}`} method='POST'>
+                <Form action={`/update/${id}`} method='POST'>
                     <label htmlFor='name'>
                         Edit Your Player's Name
                         <input type='text' id='name' name='name' defaultValue={aPlayer.name}/>
@@ -43,22 +43,22 @@ function Show(props) {
                     <button style={{"backgroundColor": "blue"}}>
                         Update Your Player
                     </button>
-                </Form> */}
+                </Form>
                 
                 {/* Delete Form */}
-                {/* <Form action={`/delete/${id}`} method='post'>
+                <Form action={`/delete/${id}`} method='post'>
                     <button style={{"backgroundColor": "red"}}>
                         Delete Your Player
                     </button>
-                </Form> */}
+                </Form>
             </div>
             
             
-            {/* <Link to='/'>
+            <Link to='/'>
                 <button>
                     Go Back
                 </button>
-            </Link> */}
+            </Link>
         </div>
     )
 }
