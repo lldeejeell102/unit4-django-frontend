@@ -7,15 +7,17 @@ function Show(props) {
 
     return (
         <div>
-            <h1>{aPlayer.name}</h1>
-            <h2>{aPlayer.position}</h2>
-            <h2>{aPlayer.age}</h2>
-            <h3>{aPlayer.height}</h3>
-            <h3>{aPlayer.salary}</h3>
+            <div className="player-box">
+                <h1>{aPlayer.name}</h1>
+                <h2>Position: {aPlayer.position}</h2>
+                <h2>Age: {aPlayer.age}</h2>
+                <h3>Height: {aPlayer.height}cm</h3>
+                <h3>Salary: ${aPlayer.salary}M</h3>
+            </div>
 
             <div>
                 {/* Update Form */}
-                <Form action={`/update/${id}`} method='POST'>
+                <Form action={`/update/${id}`} method='POST' className="update-form">
                     <label htmlFor='name'>
                         Edit Your Player's Name
                         <input type='text' id='name' name='name' defaultValue={aPlayer.name}/>
@@ -40,14 +42,15 @@ function Show(props) {
                         Edit Your Player's Salary
                         <input type='number' id='salary' name='salary' defaultValue={aPlayer.salary}/>
                     </label>
-                    <button style={{"backgroundColor": "blue"}}>
+                    <button className='update-btn'>
                         Update Your Player
                     </button>
                 </Form>
                 
+                <hr/>
                 {/* Delete Form */}
                 <Form action={`/delete/${id}`} method='post'>
-                    <button style={{"backgroundColor": "red"}}>
+                    <button className='delete-btn'>
                         Delete Your Player
                     </button>
                 </Form>
@@ -55,7 +58,7 @@ function Show(props) {
             
             
             <Link to='/'>
-                <button>
+                <button className='goback-btn'>
                     Go Back
                 </button>
             </Link>

@@ -7,25 +7,37 @@ function Index(props) {
     return (
         <div>
             <h1>
-                Add a Player
+                Create Your DRMTM (Dream Team)
             </h1>
-            <Form action='/create' method='POST'>
-                <label htmlFor='name'>
-                    <input type='text' name='name' id="name"/>
-                </label>
-                <label htmlFor='age'>
-                    <input type='text' name='age' id="age"/>
-                </label>
-                <label htmlFor='position'>
-                    <input type='text' name='position' id="position"/>
-                </label>
-                <label htmlFor='salary'>
-                    <input type='number' name='age' id="name"/>
-                </label>
-                <button>
-                    Add New Player
-                </button>
-            </Form>
+            <div className="index-form">
+                <Form action='/create' method='POST' className="form">
+                    <div className="index-name-field">
+                        <label htmlFor='name'>
+                            <input type='text' name='name' id="name" placeholder="player name"/>
+                        </label>
+                    </div>
+                    <div className="index-age-field">
+                        <label htmlFor='age'>
+                            <input type='text' name='age' id="age" placeholder="age"/>
+                        </label>
+                    </div>
+                    <div className="index-position-field">
+                        <label htmlFor='position'>
+                            <input type='text' name='position' id="position" placeholder="position (PG, SG, etc)"/>
+                        </label>
+                    </div>
+                    <div className="index-salary-field">
+                        <label htmlFor='salary'>
+                            <input type='number' name='age' id="name" placeholder="salary (in Millions)"/>
+                        </label>
+                    </div>
+                    <div className="index-btn">
+                        <button>
+                            To the DRMTM
+                        </button>
+                    </div>
+                </Form>
+            </div>
             <hr/>
             {allPlayers.map((player, i) => <Player player={player} key={i}/>)}
         </div>

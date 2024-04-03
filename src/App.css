@@ -1,38 +1,184 @@
-.App {
+/* Instructors All DreamTeam
+Davey
+AM Coder
+Joy
+Kyle
+Fern
+Leonardo - Sixth Man */
+
+
+:root{
+  --darker-purple: #3D0066;
+  --dark-purple: #5C0099;
+  --purple: #C86BFA;
+  --darker-gold: #FDC500;
+  --dark-gold: #FFD500;
+  --gold: #FFEE32;
+  --black: #282828;
+  --white: whitesmoke;
+}
+
+body{
+  background-color: var(--black);
+  color: var(--white)
+}
+#root{
+  padding: 3rem;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* LINKS */
+/* ////////////////////////////////////////////////////////////////// */
+a{
+  color: var(--darker-gold)
+}
+a:visited{
+  text-decoration: none;
+}
+a:hover{
+  color: var(--purple)
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* Index Page */
+/* ////////////////////////////////////////////////////////////////// */
+h1{
+  text-align:center
+}
+.index-form{
+  min-width: 100%;
+  height: 75%;
+}
+/* .index-name-field, .index-age-field, .index-position-field, .index-salary-field{
+  color: aqua
+} */
+label{
+  display:flex;
+  justify-content: center;
+}
+input{
+  width:50vw;
+  height: 1.75rem;
+  margin-bottom: .75rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* ////////////////////////////////////////////////////////////////// */
+/* BUTTON */
+/* ////////////////////////////////////////////////////////////////// */
+button {
+  background-color: var(--darker-purple);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color:var(--white);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: .8px;
+  line-height: 20px;
+  display: block;
+  margin: auto;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+  width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:after {
+  background-clip: padding-box;
+  background-color:var(--dark-purple);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:main,
+button:focus {
+  user-select: auto;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.5);
+  -webkit-filter: brightness(1.1);
+}
+/* 
+button:disabled {
+  cursor: auto;
+} */
+
+button:active {
+  border-width: 8px 0 0;
+  background: none;
+}
+
+hr{
+  margin: 3rem;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* Show Page */
+/* ////////////////////////////////////////////////////////////////// */
+.player-box{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  border: dotted;
+  margin-bottom: 2rem;
+}
+.player-box h1{
+  color: var(--dark-gold)
 }
 
-.App-link {
-  color: #61dafb;
+.update-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  border:thick double var(--gold)
+}
+.update-form label{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.update-form input{
+  margin:auto;
+  margin-bottom: .5rem;
+  border-radius: 25px;
+}
+
+.update-btn{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.delete-btn{
+  margin-bottom: 1rem;
+  /* background-color: red; */
+}
+
+.delete-btn:after {
+  background-color: #d11a2a;
 }
