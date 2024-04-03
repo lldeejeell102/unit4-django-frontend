@@ -16,19 +16,24 @@ function Index(props) {
                             <input type='text' name='name' id="name" placeholder="player name"/>
                         </label>
                     </div>
-                    <div className="index-age-field">
-                        <label htmlFor='age'>
-                            <input type='text' name='age' id="age" placeholder="age"/>
-                        </label>
-                    </div>
                     <div className="index-position-field">
                         <label htmlFor='position'>
                             <input type='text' name='position' id="position" placeholder="position (PG, SG, etc)"/>
                         </label>
                     </div>
+                    <div className="index-age-field">
+                        <label htmlFor='age'>
+                            <input type='text' name='age' id="age" placeholder="age"/>
+                        </label>
+                    </div>
+                    <div className="index-height-field">
+                        <label htmlFor='height'>
+                            <input type='text' name='height' id="height" placeholder="height (in CMs)"/>
+                        </label>
+                    </div>
                     <div className="index-salary-field">
                         <label htmlFor='salary'>
-                            <input type='number' name='age' id="name" placeholder="salary (in Millions)"/>
+                            <input type='number' name='salary' id="salary" placeholder="salary (in Millions)"/>
                         </label>
                     </div>
                     <div className="index-btn">

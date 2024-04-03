@@ -13,7 +13,7 @@ export const createAction = async({request}) => {
         salary: formData.get('salary'),
     }
 
-    await fetch(`${URL}`, {
+    await fetch(`${URL}/drmtm/`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -38,7 +38,7 @@ export const updateAction = async({request, params}) => {
     }
 
     await fetch(`${URL}/drmtm/${id}/`, {
-        method: 'put',
+        method: 'PUT',
         headers: {
             'Content-type': 'application/json'
         },

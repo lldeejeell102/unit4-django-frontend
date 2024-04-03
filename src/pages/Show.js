@@ -17,7 +17,7 @@ function Show(props) {
 
             <div>
                 {/* Update Form */}
-                <Form action={`/update/${id}`} method='POST' className="update-form">
+                <Form action={`/update/${id}`} method='PUT' className="update-form">
                     <label htmlFor='name'>
                         Edit Your Player's Name
                         <input type='text' id='name' name='name' defaultValue={aPlayer.name}/>
