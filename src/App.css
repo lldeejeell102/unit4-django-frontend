@@ -178,6 +178,10 @@ hr{
   margin-bottom: 1rem;
   /* background-color: red; */
 }
+.delete-btn{
+  margin-bottom: 1rem;
+  /* background-color: red; */
+}
 
 .delete-btn:after {
   background-color: #d11a2a;
